@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Learning - Community</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root {
+    --primary: #6f4e37;    /* Coffee */
+    --secondary: #a67c52;  /* Light Coffee */
+    --accent: #d9c7b2;     /* Light highlight */
+    --light: #ffffff;       /* White */
+    --dark: #3e2f2f;        /* Dark coffee for text */
+    --gray: #8b7d7d;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  body { background: var(--light); color: var(--dark); line-height:1.6; }
+
+  /* Header */
+  header {
+    background: linear-gradient(120deg, var(--primary), var(--secondary));
+    color: var(--light);
+    padding: 15px 0;
+    position: sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  }
+  .header-content { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:0 auto; padding:0 20px; }
+  .logo { font-size:1.8rem; font-weight:700; display:flex; align-items:center; }
+  .logo i { margin-right:10px; color: var(--accent); }
+  nav ul { display:flex; list-style:none; }
+  nav ul li { margin-left:25px; }
+  nav ul li a { color: var(--light); text-decoration:none; font-weight:500; transition:0.3s; }
+  nav ul li a:hover, nav ul li a.active { color: var(--accent); }
+  .btn { padding:10px 20px; border-radius:50px; border:none; cursor:pointer; font-weight:600; transition:0.3s; }
+  .btn-primary { background: var(--primary); color: var(--light); }
+  .btn-primary:hover { background: var(--secondary); transform: translateY(-2px); }
+  .btn-outline { background:transparent; border:2px solid var(--light); color: var(--light); margin-right:15px; }
+  .btn-outline:hover { background: var(--light); color: var(--primary); }
+
+  /* Hero */
+  .hero { padding:80px 20px; text-align:center; background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover; position:relative; color: var(--light); }
+  .hero::before { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(111,78,55,0.8), rgba(166,124,82,0.8)); }
+  .hero-content { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+  .hero h1 { font-size:2.8rem; margin-bottom:15px; }
+  .hero p { font-size:1.1rem; color: var(--light); }
+
+  /* Community Section */
+  .community-section { max-width:1200px; margin:50px auto; padding:0 20px; }
+  .section-title { text-align:center; margin-bottom:40px; }
+  .section-title h2 { font-size:2.5rem; color: var(--secondary); margin-bottom:10px; }
+  .section-title p { color: var(--gray); }
+
+  .community-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; }
+  .community-card { background: var(--accent); border-radius:15px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:0.3s; }
+  .community-card:hover { transform: translateY(-5px); }
+  .community-img { height:180px; background-position:center; background-size:cover; }
+  .community-content { padding:20px; }
+  .community-role { display:inline-block; padding:5px 15px; background: var(--primary); color: var(--light); border-radius:50px; font-size:0.8rem; margin-bottom:10px; }
+  .community-card h3 { font-size:1.3rem; margin-bottom:10px; }
+  .community-card p { color: var(--dark); font-size:0.95rem; margin-bottom:15px; }
+  .community-card a { text-decoration:none; color: var(--primary); font-weight:600; transition:0.3s; }
+  .community-card a:hover { color: var(--secondary); }
+
+  /* Footer */
+  footer { background: var(--dark); color: var(--light); padding:40px 20px; text-align:center; }
+  footer p { color: var(--accent); font-size:0.9rem; }
+
+  @media(max-width:768px){
+    .header-content { flex-direction:column; }
+    nav ul { margin:15px 0; }
+    .hero h1 { font-size:2rem; }
+    .community-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo"><i class="fas fa-graduation-cap"></i> E-Learning</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="community.html" class="active">Community</a></li>
+        </ul>
+      </nav>
+      <div class="user-actions">
+        <button class="btn btn-outline">Sign In</button>
+        <button class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Join Our Community</h1>
+      <p>Connect with learners, mentors, and experts to share knowledge and grow together.</p>
+    </div>
+  </section>
+
+  <!-- Community Grid -->
+  <section class="community-section">
+    <div class="section-title">
+      <h2>Featured Members</h2>
+      <p>Meet some of our active learners and instructors who make our community vibrant.</p>
+    </div>
+    <div class="community-grid">
+      <div class="community-card">
+        <div class="community-img" style="background-image:url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="community-content">
+          <span class="community-role">Instructor</span>
+          <h3>Jane Doe</h3>
+          <p>Expert in Web Development and UI/UX design with 10+ years of teaching experience.</p>
+          <a href="#">View Profile</a>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-img" style="background-image:url('https://images.unsplash.com/photo-1502767089025-6572583495b3?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="community-content">
+          <span class="community-role">Mentor</span>
+          <h3>John Smith</h3>
+          <p>Data Science mentor helping learners master Python and machine learning projects.</p>
+          <a href="#">View Profile</a>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-img" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="community-content">
+          <span class="community-role">Learner</span>
+          <h3>Emily Johnson</h3>
+          <p>Passionate learner exploring web development and cybersecurity courses actively.</p>
+          <a href="#">View Profile</a>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-img" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="community-content">
+          <span class="community-role">Contributor</span>
+          <h3>Michael Lee</h3>
+          <p>Shares tutorials, articles, and code snippets to support the learning community.</p>
+          <a href="#">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 E-Learning. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
