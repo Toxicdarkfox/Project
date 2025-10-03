@@ -224,11 +224,10 @@ body {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="dashboard.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="courses.php">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="progress.php">Progress</a></li>
-        <li class="nav-item"><a class="nav-link" href="quiz.php">Quizzes</a></li>
+        <li class=
         <li class="nav-item"><a class="nav-link" href="certificates.php">Certificates</a></li>
         <li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>
         <li class="nav-item"><a class="nav-link text-danger fw-bold" href="logout.php">Logout</a></li>
